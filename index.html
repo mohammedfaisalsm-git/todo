@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header and Dark Mode Toggle -->
+        <header class="header">
+            <h1 class="title">To-Do List</h1>
+            <button id="darkModeToggle" class="dark-mode-btn">Dark Mode</button>
+        </header>
+        
+        <!-- Task Input Section -->
+        <section class="task-input">
+            <input type="text" id="taskInput" placeholder="Add Your Task" class="input">
+            <input type="datetime-local" id="dueDateInput" class="input">
+            <select id="categorySelect" class="input">
+                <option value="">Select Category</option>
+                <option value="Work">Work</option>
+                <option value="Urgent">Urgent</option>
+                <option value="Personal">Personal</option>
+            </select>
+            <textarea id="notesInput" placeholder="Add Notes" class="input"></textarea>
+            <button id="addTaskButton" class="add-task-btn">Add Task</button>
+        </section>
+
+        <!-- Task List Section -->
+        <section class="task-list-section">
+            <h2 class="task-list-title">List of Tasks:</h2>
+            <div id="taskList" class="task-list"></div>
+            <p id="noTasksMessage" class="no-tasks-message">No Task Found</p>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

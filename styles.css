@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Style */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
+    transition: background-color 0.3s ease;
+}
+
+/* Wrapper for Centering Content */
+.wrapper {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden; /* Ensures no scrollbars appear within the wrapper */
+    max-height: 90vh; /* Limits the height to avoid overflow */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* Header and Title */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    background-color: #444;
+}
+
+/* Task Input Section */
+.task-input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Add Task Button */
+.add-task-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Section */
+.task-list-section {
+    margin-top: 20px;
+}
+
+.task-list-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.task-list {
+    max-height: 60vh; /* Limits the height of the task list */
+    overflow-y: auto; /* Enables vertical scrolling for the task list */
+}
+
+.task-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.task-item.line-through {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ff4d4f;
+    transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: #ff1a1a;
+}
+
+.no-tasks-message {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ddd;
+}
+
+body.dark-mode .wrapper {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .input {
+    background-color: #333;
+    color: #ddd;
+    border-color: #555;
+}
+
+body.dark-mode .add-task-btn {
+    background-color: #444;
+}
+
+body.dark-mode .task-item {
+    background-color: #333;
+}
+
+body.dark-mode .delete-btn {
+    color: #ff4d4f;
+}
